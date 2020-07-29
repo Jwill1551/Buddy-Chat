@@ -17,37 +17,53 @@
 
 // Signs-in Friendly Chat.
 function signIn() {
-  alert('TODO: Implement Google Sign-In');
   // TODO 1: Sign in Firebase with credential from the Google user.
+  let provider = new firebase.auth.GoogleAuthProvider();
+  firebase.auth().signInWithPopup(provider);
 }
 
 // Signs-out of Friendly Chat.
 function signOut() {
   // TODO 2: Sign out of Firebase.
+  firebase.auth().signOut();
 }
 
 //Initialize firebase.
 function initFirebase(){
   // TODO
+  firebase.initializeApp({
+   apiKey: "AIzaSyC-ND9OBp7qVc9PEVm8LRExES8Pd8MkqV8",
+   authDomain: "smapchat-a4e62.firebaseapp.com",
+   databaseURL: "https://smapchat-a4e62.firebaseio.com",
+   projectId: "smapchat-a4e62",
+   storageBucket: "smapchat-a4e62.appspot.com",
+   messagingSenderId: "207011280655",
+   appId: "1:207011280655:web:1882cbfa2da8218fb5b07a",
+   measurementId: "G-E1PGVWZGKM"
+  });
 }
 // Initiate firebase auth.
 function initFirebaseAuth() {
   // TODO 3: Initialize Firebase.
+  firebase.auth().onAuthStateChanged(authStateObserver);
 }
 
 // Returns the signed-in user's profile Pic URL.
 function getProfilePicUrl() {
   // TODO 4: Return the user's profile pic URL.
+  return firebase.auth().currentUser.photoUrl || '/images/profile_placeholder.png';
 }
 
 // Returns the signed-in user's display name.
 function getUserName() {
   // TODO 5: Return the user's display name.
+  return firebase.auth().currentUser.displayName;
 }
 
 // Returns true if a user is signed-in.
 function isUserSignedIn() {
   // TODO 6: Return true if a user is signed-in.
+  return !!firebase.auth().currentUser;
 }
 
 // Saves a new message on the Firebase DB.
@@ -284,18 +300,18 @@ function checkSetup() {
   }
 }
 // Shortcuts to DOM Elements.
-var messageListElement;
-var messageFormElement;
-var messageInputElement;
-var submitButtonElement;
-var imageButtonElement;
-var imageFormElement;
-var mediaCaptureElement;
-var userPicElement;
-var userNameElement;
-var signInButtonElement;
-var signOutButtonElement;
-var signInSnackbarElement;
+var messageListElement = document.getElementById('messages');
+var messageFormElement = document.getElementById('message-form');
+var messageInputElement = document.getElementById('message');
+var submitButtonElement = document.getElementById('submit');
+var imageButtonElement = document.getElementById('submitImage');
+var imageFormElement = document.getElementById('image-form');
+var mediaCaptureElement = document.getElementById('mediaCapture');
+var userPicElement = document.getElementById('user-pic');
+var userNameElement = document.getElementById('user-name');
+var signInButtonElement = document.getElementById('sign-in');
+var signOutButtonElement = document.getElementById('sign-out');
+var signInSnackbarElement = document.getElementById('must-signin-snackbar');
 
 // initialize Firebase
 initFirebase();
