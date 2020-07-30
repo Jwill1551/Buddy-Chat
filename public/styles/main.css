@@ -50,9 +50,10 @@ main, #messages-card {
   height: 100%;
   padding-top: 0;
   padding-bottom: 0;
+  background-color: gainsboro
 }
 #messages {
-  overflow-y: auto;
+  overflow-y: auto; 
   margin-bottom: 10px;
   height: calc(100% - 80px);
   display: flex;
@@ -177,7 +178,7 @@ main, #messages-card {
   }
   #user-container {
     top: 72px;
-    background-color: rgb(3,155,229);
+    background-color: salmon;
     height: 38px;
     padding-top: 3px;
     padding-right: 2px;
@@ -190,12 +191,14 @@ main, #messages-card {
   }
 }
 .mdl-textfield__label:after {
-  background-color: #0288D1;
+  background-color: salmon;
 }
 .mdl-textfield--floating-label.is-focused .mdl-textfield__label {
-  color: #0288D1;
+  color: salmon;
 }
 .mdl-button .material-icons {
   top: -1px;
   margin-right: 5px;
+  color: darkslategray;
+  background-color: sandybrown;
 }

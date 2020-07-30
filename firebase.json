@@ -1,5 +1,9 @@
 {
-  "hosting": {
+  "firestore": {
+  "rules": "firestore.rules"
+  }, "storage":{
+    "rules": "storage.rules"
+    }, "hosting": {
     "public": "./public",
     "headers": [{
       "source" : "**/*.@(js|html)",
@@ -10,3 +14,4 @@
     }]
   }
 }
+
