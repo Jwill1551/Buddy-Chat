@@ -1,17 +1,22 @@
 {
   "firestore": {
-  "rules": "firestore.rules"
-  }, "storage":{
+    "rules": "firestore.rules"
+  },
+  "storage": {
     "rules": "storage.rules"
-    }, "hosting": {
-    "public": "./public",
-    "headers": [{
-      "source" : "**/*.@(js|html)",
-      "headers" : [ {
-        "key" : "Cache-Control",
-        "value" : "max-age=0"
-      } ]
-    }]
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
   }
 }
-

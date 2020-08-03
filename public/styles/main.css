@@ -28,6 +28,7 @@ main, #messages-card {
 #messages-card {
   margin-top: 15px;
 }
+
 .mdl-layout__header-row span {
   margin-left: 15px;
   margin-top: 17px;
@@ -36,11 +37,41 @@ main, #messages-card {
   max-width: 1024px;
   margin: auto;
 }
+
 .material-icons {
   font-size: 36px;
   top: 8px;
   position: relative;
+  color: maroon;
+  animation: colorEff 40s ease-in 0s 5;
 }
+
+
+@keyframes colorEff {
+  10% {color: red}
+  20% {color: magenta}
+  30% {color: orchid}
+  40% {color: pink}
+  50% {color: lightcoral}
+  60% {color: salmon}
+  70% {color: coral}
+  80% {color: tomato}
+  90% {color: red}
+  100% {color: darkred}
+}
+
+@keyframes bgColorEff {
+  25% {background-color: darkred}
+  50% {background-color: crimson}
+  75% {background-color: deeppink}
+  100% {background-color: darkslategrey}
+}
+
+.mdl-layout__header2{
+  background-image: url(/public/images/manAndCar.jpg);
+}
+
+
 .mdl-layout__header-row {
   padding: 0;
   margin: 0 auto;
@@ -50,15 +81,18 @@ main, #messages-card {
   height: 100%;
   padding-top: 0;
   padding-bottom: 0;
-  background-color: gainsboro
+  background-color: slategray;
 }
+
 #messages {
   overflow-y: auto; 
   margin-bottom: 10px;
   height: calc(100% - 80px);
   display: flex;
   flex-direction: column;
+  color: white;
 }
+
 #message-filler {
   flex-grow: 1;
 }
@@ -68,7 +102,7 @@ main, #messages-card {
 .message-container {
   display: block;
   margin-top: 10px;
-  border-top: 1px solid #f3f3f3;
+  border-top: 1px solid #715454;
   padding-top: 10px;
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -79,11 +113,15 @@ main, #messages-card {
 .message-container .pic {
   background-image: url('/images/profile_placeholder.png');
   background-repeat: no-repeat;
-  width: 30px;
+  width: 40px;
   height: 30px;
   background-size: 30px;
-  border-radius: 20px;
+  border-radius: 30PX 30px 30px 30px;
+  background-color: darkslategray;
+  animation: bgColorEff 40s ease-in 0s 5;
 }
+
+
 .message-container .spacing {
   display: table-cell;
   vertical-align: top;
@@ -93,15 +131,17 @@ main, #messages-card {
   width: calc(100% - 40px);
   padding: 5px 0 5px 10px;
 }
+
 .message-container .name {
   display: inline-block;
   width: 100%;
   padding-left: 40px;
-  color: #bbb;
+  color: maroon;
   font-style: italic;
   font-size: 12px;
   box-sizing: border-box;
 }
+
 #message-form {
   display: flex;
   flex-direction: row;
@@ -116,7 +156,9 @@ main, #messages-card {
 }
 #message-form .mdl-textfield {
   width: calc(100% - 100px);
+  color: white;
 }
+
 #message-form button, #image-form button {
   width: 100px;
   margin: 15px 0 0 10px;
