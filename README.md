@@ -4,8 +4,11 @@ The Buddy-Chat app allows users to share messages and images locally on a fireba
 
 ## Created Using 
 
-The tools that were used for this programs are the following: 
-Javascripts, HTML/CSS, Material Design, and Firebase.
+The tools that were used for this program are the following: 
+- Javascripts
+- HTML/CSS
+- Material Design
+- Firebase
 
 ## Fucntions 
 - Css Animations 
