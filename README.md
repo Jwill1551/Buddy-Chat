@@ -25,10 +25,10 @@ The tools that were used for this program are the following:
 - More Moving Animations & Transitions
 - Stylish Alert boxes
 
-## Video Example
-Below is an example of what the applications Buddy-Chat can do!
+## Video/Link Example
+Below is a link with an example of what the applications Buddy-Chat can do!
 
-![](https://firebasestorage.googleapis.com/v0/b/smapchat-a4e62.appspot.com/o/sample%2FChat%20App%20-%20Screen%20Recording%20.mov?alt=media&token=a5fda9eb-1e09-4a43-903e-c16d24dd0a40)
+[ScreenRecording](https://drive.google.com/file/d/1LzajELQL4ocU9Q3hoyzm6pqgVhjhbMpP/view?usp=sharing)
 
 # Getting Started 
 
