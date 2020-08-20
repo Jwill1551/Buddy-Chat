@@ -10,7 +10,7 @@ The tools that were used for this program are the following:
 - Material Design
 - Firebase
 
-## Fucntions 
+## Features
 - Css Animations 
 - Saved responses and messages 
 - see which users posted 
